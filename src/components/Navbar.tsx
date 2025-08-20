@@ -41,7 +41,7 @@ export function Navbar() {
             className="text-2xl font-bold text-red-600 cursor-pointer"
             onClick={() => navigate("/")}
           >
-            StreamFlix
+            BuzzFlix
           </motion.div>
 
           {/* Desktop Navigation */}
