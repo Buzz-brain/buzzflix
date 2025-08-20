@@ -39,7 +39,7 @@ export function Navbar() {
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="text-2xl font-bold text-red-600 cursor-pointer"
-            onClick={() => navigate('/')}
+            onClick={() => navigate("/")}
           >
             StreamFlix
           </motion.div>
@@ -51,10 +51,10 @@ export function Navbar() {
                 key={item.path}
                 whileHover={{ scale: 1.05 }}
                 onClick={() => navigate(item.path)}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-sm font-medium bg-gray-900 transition-colors ${
                   location.pathname === item.path
-                    ? 'text-white'
-                    : 'text-gray-300 hover:text-white'
+                    ? "text-white"
+                    : "text-gray-300 hover:text-white"
                 }`}
               >
                 {item.name}
@@ -77,7 +77,9 @@ export function Navbar() {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search movies, series..."
                   className={`absolute right-0 bg-gray-900/90 text-white rounded-full px-4 py-2 pl-12 border border-gray-700 focus:outline-none focus:border-red-500 transition-all ${
-                    isSearchExpanded ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                    isSearchExpanded
+                      ? "opacity-100"
+                      : "opacity-0 pointer-events-none"
                   }`}
                 />
                 <motion.button
@@ -85,7 +87,7 @@ export function Navbar() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setIsSearchExpanded(!isSearchExpanded)}
-                  className="relative z-10 p-2 text-gray-300 hover:text-white transition-colors"
+                  className="relative z-10 p-2 bg-red-600 text-gray-300 hover:text-white transition-colors"
                 >
                   <Search className="w-5 h-5" />
                 </motion.button>
@@ -96,7 +98,7 @@ export function Navbar() {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="p-2 text-gray-300 hover:text-white transition-colors relative"
+              className="p-2 text-gray-300 bg-gray-900 hover:text-white transition-colors relative"
             >
               <Bell className="w-5 h-5" />
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></div>
@@ -105,15 +107,17 @@ export function Navbar() {
             {/* Profile */}
             <motion.button
               whileHover={{ scale: 1.05 }}
-              onClick={() => navigate('/account')}
-              className="flex items-center space-x-2 p-1 rounded-lg hover:bg-gray-800 transition-colors"
+              onClick={() => navigate("/account")}
+              className="flex items-center bg-gray-900 space-x-2 p-1 rounded-lg hover:bg-gray-800 transition-colors"
             >
               <img
                 src={currentUser.avatar}
                 alt="Profile"
                 className="w-8 h-8 rounded-full object-cover"
               />
-              <span className="hidden sm:block text-white text-sm">{currentUser.name}</span>
+              <span className="hidden sm:block text-white text-sm">
+                {currentUser.name}
+              </span>
             </motion.button>
 
             {/* Mobile Menu Toggle */}
@@ -123,7 +127,11 @@ export function Navbar() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors"
             >
-              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {isMobileMenuOpen ? (
+                <X className="w-5 h-5" />
+              ) : (
+                <Menu className="w-5 h-5" />
+              )}
             </motion.button>
           </div>
         </div>
@@ -132,7 +140,7 @@ export function Navbar() {
         <motion.div
           initial={{ height: 0, opacity: 0 }}
           animate={{
-            height: isMobileMenuOpen ? 'auto' : 0,
+            height: isMobileMenuOpen ? "auto" : 0,
             opacity: isMobileMenuOpen ? 1 : 0,
           }}
           className="lg:hidden overflow-hidden border-t border-gray-800"
@@ -148,8 +156,8 @@ export function Navbar() {
                 }}
                 className={`block w-full text-left px-4 py-2 text-sm transition-colors ${
                   location.pathname === item.path
-                    ? 'text-white bg-gray-800'
-                    : 'text-gray-300 hover:text-white hover:bg-gray-800'
+                    ? "text-white bg-gray-800"
+                    : "text-gray-300 hover:text-white hover:bg-gray-800"
                 }`}
               >
                 {item.name}
