@@ -1,4 +1,4 @@
-import React from 'react';
+// ...existing code...
 import { motion } from 'framer-motion';
 import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { TrendingUp, Database, Clock, Users } from 'lucide-react';

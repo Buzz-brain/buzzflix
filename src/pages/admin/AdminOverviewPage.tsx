@@ -1,4 +1,4 @@
-import React from 'react';
+// ...existing code...
 import { motion } from 'framer-motion';
 import { Users, Film, MessageSquare, HardDrive, Clock, TrendingUp } from 'lucide-react';
 import { LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
