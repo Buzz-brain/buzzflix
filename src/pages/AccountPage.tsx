@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { User, Mail, Crown, CreditCard, Settings, Shield, Bell, Download } from 'lucide-react';
+import { User, Crown, CreditCard, Settings, Shield, Bell, Download } from 'lucide-react';
 import { useApp } from '@/contexts/AppContext';
 
 export function AccountPage() {
@@ -143,7 +143,7 @@ export function AccountPage() {
                 { icon: Shield, title: 'Privacy', subtitle: 'Security settings' },
                 { icon: Download, title: 'Downloads', subtitle: 'Offline content' },
                 { icon: User, title: 'Profiles', subtitle: 'Family accounts' }
-              ].map((setting, index) => (
+              ].map((setting) => (
                 <motion.button
                   key={setting.title}
                   whileHover={{ scale: 1.02 }}

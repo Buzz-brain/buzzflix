@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { User, Bell, Shield, Database, Palette, Globe } from 'lucide-react';
 import { useAdmin } from '@/contexts/AdminContext';

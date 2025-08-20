@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { HeroSection } from '@/components/HeroSection';
 import { MovieCarousel } from '@/components/MovieCarousel';
 import { MovieGridSkeleton } from '@/components/MovieSkeleton';
-import { movies, series, genres } from '@/data/mockData';
+import { movies, series } from '@/data/mockData';
 
 export function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
