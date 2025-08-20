@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { DivideIcon as LucideIcon } from 'lucide-react';
+// ...existing code...
 
 interface KPICardProps {
   title: string;
   value: number;
   unit?: string;
   change?: number;
-  icon: LucideIcon;
+  icon: any;
   color: string;
   delay?: number;
 }

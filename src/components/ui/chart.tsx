@@ -1,4 +1,4 @@
-import * as React from 'react';
+// ...existing code...
 import * as RechartsPrimitive from 'recharts';
 import {
   NameType,

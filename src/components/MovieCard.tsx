@@ -1,4 +1,4 @@
-import React from 'react';
+// ...existing code...
 import { motion } from 'framer-motion';
 import { Play, Plus, Check, Star } from 'lucide-react';
 import { Movie } from '@/data/mockData';

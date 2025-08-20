@@ -1,6 +1,6 @@
-import React, { createContext, useContext, ReactNode } from 'react';
+import { createContext, useContext, ReactNode } from 'react';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
-import { Movie, currentUser } from '@/data/mockData';
+import { currentUser } from '@/data/mockData';
 
 interface AppContextType {
   myList: string[];

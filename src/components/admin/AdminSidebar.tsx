@@ -1,4 +1,4 @@
-import React from 'react';
+// ...existing code...
 import { motion } from 'framer-motion';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { 
@@ -83,7 +83,7 @@ export function AdminSidebar({ isCollapsed, onToggle }: AdminSidebarProps) {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => navigate(item.path)}
-                className={`w-full flex items-center space-x-3 px-3 py-3 rounded-lg transition-colors ${
+                className={`w-full flex items-center bg-gray-800 space-x-3 px-3 py-3 rounded-lg transition-colors ${
                   isActive 
                     ? 'bg-red-600 text-white' 
                     : 'text-gray-300 hover:bg-gray-800 hover:text-white'
@@ -131,7 +131,7 @@ export function AdminSidebar({ isCollapsed, onToggle }: AdminSidebarProps) {
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           onClick={handleLogout}
-          className="w-full flex items-center space-x-3 px-3 py-3 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white transition-colors"
+          className="w-full flex items-center bg-gray-600 space-x-3 px-3 py-3 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white transition-colors"
         >
           <LogOut className="w-5 h-5 flex-shrink-0" />
           {!isCollapsed && (
